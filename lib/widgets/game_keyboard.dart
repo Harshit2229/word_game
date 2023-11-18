@@ -17,6 +17,14 @@ class _GameKeyboardState extends State<GameKeyboard> {
   List row2 = "ASDFGHJKL".split("");
   List row3 = ["DEL", "Z", "X", "C", "V", "B", "N", "M", "SUBMIT"];
 
+  void _restartGame() {
+    setState(() {
+      // Reset game variables or clear the data structures
+      widget.game = WordGame(); // Create a new instance of WordGame
+      WordGame.game_message = ""; // Reset game messages or flags
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,7 +38,7 @@ class _GameKeyboardState extends State<GameKeyboard> {
         ),
         GameBoard(widget.game),
         const SizedBox(
-          height: 40.0,
+          height: 30.0,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -191,6 +199,22 @@ class _GameKeyboardState extends State<GameKeyboard> {
             );
           }).toList(),
         ),
+        const SizedBox(
+          height: 20.0,
+        ),
+        ElevatedButton(
+          onPressed: _restartGame,
+          style: ElevatedButton.styleFrom(
+            primary: Colors.white, // Background color
+            onPrimary: Colors.black, // Text color
+            minimumSize: const Size(140, 52), // Width and height of the button
+          ),
+          child: const Text(
+            'Restart Game',
+            style: TextStyle(color: Colors.black), // Text color
+          ),
+        ),
+
       ],
     );
   }

@@ -28,17 +28,27 @@ class _GameScreenState extends State<GameScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text(
-            "Word Game",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 36,
-              fontWeight: FontWeight.bold,
-            ),
+          const Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+               Text(
+                "Word Game",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 36,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(width: 10,),
+              Icon(
+                Icons.gamepad,
+                size: 50,
+                color: Colors.white,
+              ),
+            ],
           ),
-          const SizedBox(
-            height: 20.0,
-          ),
+          const SizedBox(height: 10),
           GameKeyboard(_game),
         ],
       ),
