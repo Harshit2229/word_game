@@ -30,10 +30,10 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Word Game",
+              "Guess The Word..!",
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 36,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -47,7 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
             CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Text(
               "Loading...",
               style: TextStyle(

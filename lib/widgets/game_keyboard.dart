@@ -19,9 +19,8 @@ class _GameKeyboardState extends State<GameKeyboard> {
 
   void _restartGame() {
     setState(() {
-      // Reset game variables or clear the data structures
-      widget.game = WordGame(); // Create a new instance of WordGame
-      WordGame.game_message = ""; // Reset game messages or flags
+      widget.game = WordGame();
+      WordGame.game_message = "";
     });
   }
 
@@ -205,13 +204,13 @@ class _GameKeyboardState extends State<GameKeyboard> {
         ElevatedButton(
           onPressed: _restartGame,
           style: ElevatedButton.styleFrom(
-            primary: Colors.white, // Background color
-            onPrimary: Colors.black, // Text color
-            minimumSize: const Size(140, 52), // Width and height of the button
+            primary: Colors.white,
+            onPrimary: Color(0xFF212121),
+            minimumSize: const Size(140, 52),
           ),
           child: const Text(
             'Restart Game',
-            style: TextStyle(color: Colors.black), // Text color
+            style: TextStyle(color: Color(0xFF212121)),
           ),
         ),
 
